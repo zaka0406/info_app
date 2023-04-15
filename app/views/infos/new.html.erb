@@ -1,0 +1,13 @@
+<div class="main">
+    <div class="content-form">
+        <h3>投稿する</h3>
+            <%= form_with(model: @info, local: true) do |form| %>
+                <%# userテーブルと連携したので不要 %>
+                <%# <%= form.text_field :name, placeholder: "山田 太郎" %>
+                <%= form.text_field :image, placeholder: "Image.url" %>
+                 <%= form.text_area :text, placeholder: "text", row:"50" %>
+                <%= form.submit "投稿" %>
+            <% end %>
+
+    </div>
+</div>

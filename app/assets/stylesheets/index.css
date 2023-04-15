@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+ }
+
+ .body{
+    /* padding-top: 30px; */
+    /* display: block; */
+    background-color: #DCDCDC; 
+    height: calc(100vh - 115px);
+
+ }
+
+ .header{
+    position: fixed;
+    z-index: 1;
+    height: 60px;
+    width: 100%;
+    background-color: #006666;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    top: 0; /* 上部から配置の基準位置を決める */
+    left: 0; /* 左から配置の基準位置を決める */
+    right: 0;
+   }
+
+ .header-items{
+    display: flex;
+ }
+
+ /* ヘッダー詳細 */
+ .items{
+    margin-left: 50px;
+    color: antiquewhite;
+ }
+
+ /* リンク全体 */
+ a{
+    color: antiquewhite;
+ }
+
+
+ P{
+  color: antiquewhite;
+ }
+
+ a.nav-link {
+   margin-left: 50px;
+ }
+
+ /* 背景画像全体 */
+ .main{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 800px;
+    padding: 60px 120px;
+    background-color: #DCDCDC;
+ }
+
+ /* 背景画像の中身(投稿内容や名前） */
+ .content{
+    height: 400px;
+    background-size: cover;
+    color: #FFF;
+    font-size: 20px;
+    background-position: center center;
+    padding: 20px 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    position: relative;
+ }
+
+ /* 詳細、編集、削除部分 */
+ .selection{
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   margin-right: 10px;
+
+ }
+
+ .lists{
+   display: flex;
+ }
+
+ .list{
+   margin-left: 20px;
+   font-size: 15px;
+ }
+
+ /* 投稿部分メイン */
+ .content-form{
+   margin: 20px 0;
+   padding: 30px;
+   background-color: #FFF;
+   box-sizing: border-box;
+ }
+
+ /* 投稿部分中身 */
+ .content-form h3{
+   margin: 0 0 20px;
+   text-align: center;
+   font-weight: bold;
+   font-size: 20px;
+   color: dimgrey;
+ }
+
+ form input{
+   width: 100%;
+   margin: 5px 0 15px;
+   padding: 10px;
+   border: 2px solid #DCDCDC;
+   border-radius: 5px;
+ }
+
+ form input,form textarea{
+   width: 100%;
+   margin: 5px 0 15px;
+   padding: 10px;
+   border: 1px solid #DCDCDC;
+   border-radius: 5px;
+ }
+
+ form input[type="submit"]{
+   background-color: #00BFFF;
+   border-radius: 20px;
+   color: antiquewhite;
+   border: 0;
+   font-size: 20px;
+ }
+
+ /* 編集・削除などのリンクボタン */
+ .list{
+   background-color: #006666;
+   border-radius: 3px;
+   padding: 2px;
+   margin: 5px;
+ }
+
+ .flash{
+   background-color: coral;
+   color: #f5f5f3;
+   font-size: 20px;
+   text-align: center;
+   z-index: 10;
+   width: 100%;
+   position: absolute;
+   padding: 10px;
+   top: 60px;
+   border-radius: 5px;
+ }
+ 
+ /* 詳細ページ */
+ .main_show {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50PX;
+  margin-bottom: 0;
+  max-width: 800px;
+  padding: 60px 120px;
+  background-color: #DCDCDC;
+}
+
+/* 投稿テキストエリア */
+#info_text{
+  height: 200px;
+  color: gray;
+  font-weight: bold;
+}
+/* ログイン・サインアップ画面 */
+.contact{
+  border: 10px ridge 	#CCCCCC;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #FFF;
+}
+
+.label{
+  color: gray;
+}
+
+.field{
+  color: gray;
+}
+span{
+  color: antiquewhite;
+}
+
+ .footer{
+   text-align: center;
+   line-height: 55px;
+   color: antiquewhite;
+   font-weight: bold;
+   background-color: #DCDCDC;
+}

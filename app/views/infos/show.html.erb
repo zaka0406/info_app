@@ -1,0 +1,30 @@
+<div class="main_show">
+<%# 詳細表示なので繰り返す必要性がない %>
+    <%# <% @infos.each do |info| %>
+    <%# 繰り返しがないため表示用の@infoにする必要性がある %>
+        <div class="content" style="background-image: url(<%= @info.image %>);">
+            <div class="selection">
+                <% if user_signed_in? && current_user.id == @info.user_id %>
+                    <ul class="lists">
+                        <li class="list">
+                            <%= link_to"編集", edit_info_path(@info.id), method: :get %>
+                        </li>
+                        <li class="list">
+                            <%= link_to "削除", info_path(@info.id), data: {turbo_method: :delete} %>
+                        </li>
+                    </ul>
+                <% end %>
+            </div>
+
+
+
+            <p><%= @info.text %></p>
+                <%# 投稿者へ飛ぶように設定 %>
+                <span class="name">
+                <a href="/users/<%= @info.user.id %>">
+                 <%= @info.user.name %>
+                </a>
+                </span>
+        </div>
+    <%# <% end %>
+</div>

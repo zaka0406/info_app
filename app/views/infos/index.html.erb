@@ -1,0 +1,31 @@
+<div class="main">
+    <% @infos.each do |info| %>
+        <div class="content" style="background-image: url(<%= info.image %>);">
+            <div class="selection">
+                <ul class="lists">
+                    <li class="list">
+                        <%= link_to"詳細", info_path(info.id), method: :get %>
+                    </li>
+
+                    <%# ログインしていてかつ投稿しているユーザとユーザー登録されている人が同じ場合に限り %>
+                    <% if user_signed_in? && current_user.id == info.user_id %>
+                        <li class="list">
+                            <%= link_to"編集", edit_info_path(info.id), method: :get %>
+                        </li>
+                        <li class="list">
+                            <%= link_to "削除", info_path(info.id), data: {turbo_method: :delete} %>
+                        </li>
+                    <% end %>
+
+                </ul>
+            </div>
+
+            <p><%= info.text %></p>
+            <span class="name">
+            <a href="/users/<%= (info.user.id) %>">
+              <%= info.user.name %>
+             </a>
+            </span>
+        </div>
+    <% end %>
+</div>

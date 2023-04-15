@@ -1,0 +1,21 @@
+<div class="main_show">
+    <% @infos.each do |tweet| %>
+        <div class="content" style="background-image: url(<%= tweet.image %>);">
+          <div class="selection">
+                <ul class="lists">
+                    <li class="list">
+                        <%= link_to"編集", edit_info_path(tweet.id), method: :get %>
+                    </li>
+                    <li class="list">
+                        <%= link_to "削除", info_path(tweet.id), data: {turbo_method: :delete} %>
+                    </li>
+                </ul>
+            </div>
+
+            <p class="text"><%= tweet.text %></p> 
+            <%# <a href="/users/<%= (tweet.user.id) %>
+             <%# <P class="name">投稿者 <%= tweet.user.name %>
+            <%# </a> %>
+        </div>
+    <% end %>
+</div>
