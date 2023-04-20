@@ -54,6 +54,9 @@ test:
 #
 production:
   <<: *default
-  database: info_app_production
-  username: info_app
-  password: <%= ENV["INFO_APP_DATABASE_PASSWORD"] %>
+  adapter: postgresql
+  url: <%= ENV['DATABASE_URL'] %>
+  # 本番ではpostgresqlを読み込ませるため初期設定の下記を削除
+  # database: info_app_production
+  # username: info_app
+  # password: <%= ENV["INFO_APP_DATABASE_PASSWORD"] %>
