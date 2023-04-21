@@ -4,7 +4,15 @@
     list-style: none;
     box-sizing: border-box;
     text-decoration: none;
+    float: none;
+	  position: static;
+
  }
+
+ img {
+	max-width: 100%;
+	height: auto;
+} 
 
  .body{
     /* padding-top: 30px; */
@@ -78,6 +86,15 @@
     border-radius: 5px;
     font-weight: bold;
     position: relative;
+ }
+
+ /* スマホ用 */
+ @media screen and(max-width:480px){
+  .content{
+    width: 100%;
+
+  }
+  
  }
 
  /* 詳細、編集、削除部分 */
