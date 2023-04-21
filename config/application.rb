@@ -18,6 +18,6 @@ module InfoApp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-    config.hosts << 'infoapp-user174.onrender.com'
+    config.hosts << 'infoapp-user0406.onrender.com'
   end
 end
