@@ -88,14 +88,6 @@
     position: relative;
  }
 
- /* スマホ用 */
- @media screen and(max-width:480px){
-  .content{
-    width: 100%;
-
-  }
-  
- }
 
  /* 詳細、編集、削除部分 */
  .selection{
@@ -220,4 +212,22 @@ span{
    color: antiquewhite;
    font-weight: bold;
    background-color: #DCDCDC;
+}
+
+/* メディアクエリ実施 */
+@media screen and (max-width: 480px) {
+  .header-title{
+    display: none;
+  }
+
+  .header{
+    height: 50px;
+  }
+
+  .content{
+    height: 200px;
+    font-size: 20px;
+    width: 100%;
+    font-weight: normal;
+  }
 }
