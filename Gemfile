@@ -79,4 +79,6 @@ gem 'devise'
 group :production do
   gem 'pg'
 
+gem 'dotenv-rails'
+
 end
