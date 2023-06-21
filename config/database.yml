@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: shir0umadake
+  password: 
   host: localhost
   # SSLを無効化
   
@@ -26,7 +26,7 @@ development:
   adapter: mysql2
   database: info_app_development
   username: root
-  password: shir0umadake
+  password: 
   socket: /var/lib/mysql/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -37,7 +37,7 @@ test:
   adapter: mysql2
   database: info_app_test
   username: root
-  password: shir0umadake
+  password: 
   socket: /var/lib/mysql/mysql.sock
 
 # As with config/credentials.yml, you never want to store sensitive information,
